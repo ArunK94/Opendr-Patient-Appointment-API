@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "b2656e7d-2b16-40ac-a501-507bb0f9b45f",
+		"name": "Patient Appointment API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28841893"
+	},
+	"item": [
+		{
+			"name": "GetBodyPart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"practiceId\" : \"1223\",\n    \"roleId\" : 2,\n    \"technology\" : \"CT Scan\",\n    \"bodyPart\" : \"\",\n    \"subBodyPart\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apistest.opendr.com/staging/v1/api/masters/getbodypart/list",
+					"protocol": "https",
+					"host": [
+						"apistest",
+						"opendr",
+						"com"
+					],
+					"path": [
+						"staging",
+						"v1",
+						"api",
+						"masters",
+						"getbodypart",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetInsurance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"practiceId\" : \"1233\",\n    \"insuranceCarrierId\" : \"111\",\n    \"clientEmrId\" : \"34\",\n    \"payerType\" : \"25\",\n    \"opendrVisibility\" : \"yes\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://apistest.opendr.com/api/masters/insurance/list",
+					"protocol": "http",
+					"host": [
+						"apistest",
+						"opendr",
+						"com"
+					],
+					"path": [
+						"api",
+						"masters",
+						"insurance",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetQuestionnaire",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"practiceId\" : \"1325\",\n    \"roleName\" : \"Patient\",\n    \"workFlow\" : \"pre-appt\",\n    \"technology\" : \"MR\",\n    \"bodyPart\" : \"Lower Extremity\",\n    \"subBodyPart\" : \"Hip\",\n    \"position\" : \"Left\",\n    \"examCode\" : \"1124\",\n    \"locationId\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apistest.opendr.com/staging/v1/api/masters/questionnaire/list",
+					"protocol": "https",
+					"host": [
+						"apistest",
+						"opendr",
+						"com"
+					],
+					"path": [
+						"staging",
+						"v1",
+						"api",
+						"masters",
+						"questionnaire",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetReport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"practiceId\" : \"1223\",\n    \"dateFrom\" : \"2020-09-09\",\n    \"dateTo\" : \"2021-01-20\",\n    \"patientId\" : \"1111\",\n    \"referringDoctorId\" : \"3445\",\n    \"emrReportId\" : \"5677\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8030/api/masters/report/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8030",
+					"path": [
+						"api",
+						"masters",
+						"report",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetReferringDoctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"practiceId\" : \"1341\",\n\"referringDoctorId\" : \"1087719\",\n\"referringDoctorName\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apistest.opendr.com/staging/v1/api/masters/referringdoctor/list",
+					"protocol": "https",
+					"host": [
+						"apistest",
+						"opendr",
+						"com"
+					],
+					"path": [
+						"staging",
+						"v1",
+						"api",
+						"masters",
+						"referringdoctor",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientInfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"practice_id\" : \"1223\",\n    \"patient_mrn\" : \"arjunodr21\",\n    \"patient_name\" : \"Arjun Opendr\",\n    \"email_address\" : \"asd@mailcatch.com\",\n    \"referring_doctor_id\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apistest.opendr.com/staging/v1/api/masters/patient/getpatientinfo/list",
+					"protocol": "https",
+					"host": [
+						"apistest",
+						"opendr",
+						"com"
+					],
+					"path": [
+						"staging",
+						"v1",
+						"api",
+						"masters",
+						"patient",
+						"getpatientinfo",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderListing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"practice_id\" : \"1303\",\n    \"order_number\" : \"62400\",\n    \"patient_name\" : \"\",\n    \"patient_mrn\" : \"OD71311932020\",\n    \"patient_id\" : \"7131194\",\n    \"order_status\": \"completed\",\n    \"date_from\": \"2020-12-01\",\n    \"date_to\": \"2021-02-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apistest.opendr.com/staging/v1/api/masters/order/vieworderdata/list",
+					"protocol": "https",
+					"host": [
+						"apistest",
+						"opendr",
+						"com"
+					],
+					"path": [
+						"staging",
+						"v1",
+						"api",
+						"masters",
+						"order",
+						"vieworderdata",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHardstopList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"practiceId\" : \"1318\",\n   \"userType\" : \"all\",\n   \"technology\" : \"US\",\n   \"bodyPart\" : \"Needle Placement\",\n   \"subbodyPart\" : \"\",\n   \"position\" : \"\",\n   \"examName\" : \"\",\n   \"insuranceName\" : \"\",\n   \"referringDoctorId\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apistest.opendr.com/staging/v1/api/masters/hardstop/gethardstopinfo/list",
+					"protocol": "https",
+					"host": [
+						"apistest",
+						"opendr",
+						"com"
+					],
+					"path": [
+						"staging",
+						"v1",
+						"api",
+						"masters",
+						"hardstop",
+						"gethardstopinfo",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientForms",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"practice_id\" : \"1351\",\n\"form_id\" : \"152492\",\n\"web_appointment_id\" : \"3307868\",\n\"web_patient_id\" : \"7396070\",\n\"exam_code\" : \"32366\",\n\"payer_type\" : \"\",\n\"language_id\" : \"1\",\n\"user_session_type\" : \"patient\",\n\"user_role\" : \"patient\",\n\"form_type\" : \"Completed\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apistest.opendr.com/staging/v1/api/masters/patientform/viewpatientformdata/list",
+					"protocol": "https",
+					"host": [
+						"apistest",
+						"opendr",
+						"com"
+					],
+					"path": [
+						"staging",
+						"v1",
+						"api",
+						"masters",
+						"patientform",
+						"viewpatientformdata",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNoficationPreps",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"practice_id\" : \"1341\",\n\"web_appointment_id\" : \"3307646\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apistest.opendr.com/staging/v1/api/masters/notificationpreps/getnotificationpreps/list",
+					"protocol": "https",
+					"host": [
+						"apistest",
+						"opendr",
+						"com"
+					],
+					"path": [
+						"staging",
+						"v1",
+						"api",
+						"masters",
+						"notificationpreps",
+						"getnotificationpreps",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAppointmentListing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"practice_id\" : \"1341\",\n\"enroll_patient_id\" : \"7386151\",\n\"appointment_type\" : \"upcoming\",\n\"appointment_status_type\" : \"Scheduled\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apistest.opendr.com/staging/v1/api/masters/appointment/getappointmentsalongwithfamilymember/list",
+					"protocol": "https",
+					"host": [
+						"apistest",
+						"opendr",
+						"com"
+					],
+					"path": [
+						"staging",
+						"v1",
+						"api",
+						"masters",
+						"appointment",
+						"getappointmentsalongwithfamilymember",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
